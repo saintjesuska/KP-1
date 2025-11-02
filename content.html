@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Контент - Информационная среда</title>
+</head>
+<body>
+    <nav>
+        <a href="index.html">Главная</a> |
+        <a href="content.html">Контент</a> |
+        <a href="forms.html">Формы</a> |
+        <a href="dom-read.html">DOM (чтение)</a> |
+        <a href="dom-change.html">DOM (изменение)</a> |
+        <a href="algorithm.html">Алгоритм</a> |
+        <a href="https://github.com/vmarshirov/g06u28" target="_blank">GitHub</a>
+    </nav>
+
+    <h1>Контент</h1>
+    
+    <div>
+        <a href="#lists">Списки</a> |
+        <a href="#media">Медиа</a> |
+        <a href="#table">Таблица</a> |
+        <a href="content.html">К началу</a>
+    </div>
+
+    <section id="lists">
+        <h2>Списки</h2>
+        
+        <h3>Нумерованный список:</h3>
+        <ol>
+            <li>Первый элемент</li>
+            <li>Второй элемент</li>
+            <li>Третий элемент</li>
+        </ol>
+        
+        <h3>Маркированный список:</h3>
+        <ul>
+            <li>Пункт A</li>
+            <li>Пункт B
+                <ul>
+                    <li>Подпункт B1</li>
+                    <li>Подпункт B2</li>
+                </ul>
+            </li>
+            <li>Пункт C</li>
+        </ul>
+    </section>
+
+    <section id="media">
+    <h2>Изображения</h2>
+    <p>Кликните на миниатюру для просмотра большого изображения:</p>
+    
+    <a href="images/large-image.jpg" target="_blank">
+    <img src="images/thumbnail.jpg" alt="Мое изображение">
+</a>
+    <p><em>Миниатюра (100×80 px)</em></p>
+</section>
+
+    <section id="table">
+    <h2>Таблица с изображениями</h2>
+    <table border="1" style="background-image: url('images/table-bg.jpg'); background-size: cover; width: 100%;">
+        <tr>
+            <th>Категория</th>
+            <th>Изображение</th>
+            <th>Ссылка</th>
+        </tr>
+        <tr>
+            <td>Технологии</td>
+            <td><img src="images/tech-photo.jpg" alt="Tech" width="60"></td>
+            <td><a href="https://example.com" target="_blank">Подробнее</a></td>
+        </tr>
+        <tr>
+            <td>Образование</td>
+            <td><img src="images/edu-photo.jpg" alt="Education" width="60"></td>
+            <td><a href="https://example.org" target="_blank">Подробнее</a></td>
+        </tr>
+    </table>
+</section>
+</body>
+</html>

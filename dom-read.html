@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM (чтение) - Информационная среда</title>
+</head>
+<body>
+    <nav>
+        <a href="index.html">Главная</a> |
+        <a href="content.html">Контент</a> |
+        <a href="forms.html">Формы</a> |
+        <a href="dom-read.html">DOM (чтение)</a> |
+        <a href="dom-change.html">DOM (изменение)</a> |
+        <a href="algorithm.html">Алгоритм</a> |
+        <a href="https://github.com/vmarshirov/g06u28" target="_blank">GitHub</a>
+    </nav>
+
+    <h1>Считывание информацию из DOM</h1>
+    
+    <div id="passport-data">
+        <p>Фамилия: <strong>Захаровская</strong></p>
+        <p>Имя: <strong>Паулина</strong></p>
+        <p>Год рождения: <strong>2006</strong></p>
+        <p>Место рождения: <strong>Казахстан</strong></p>
+        <p>Дата выдачи: <strong>12.01.2020</strong></p>
+    </div>
+
+    <div id="dom-data" style="margin-top: 20px; padding: 10px; border: 1px solid #ccc;">
+        <h3>Данные, полученные из DOM:</h3>
+        <p id="surname-display"></p>
+        <p id="name-display"></p>
+        <p id="birthyear-display"></p>
+    </div>
+
+    <script>
+        // Получение данных из DOM
+        const paragraphs = document.getElementsByTagName('p');
+        const surname = paragraphs[0].childNodes[1].innerText;
+        const name = paragraphs[1].childNodes[1].innerText;
+        const birthYear = paragraphs[2].childNodes[1].innerText;
+
+        // Отображение полученных данных
+        document.getElementById('surname-display').innerHTML = '<strong>Фамилия из DOM:</strong> ' + surname;
+        document.getElementById('name-display').innerHTML = '<strong>Имя из DOM:</strong> ' + name;
+        document.getElementById('birthyear-display').innerHTML = '<strong>Год рождения из DOM:</strong> ' + birthYear;
+    </script>
+</body>
+</html>

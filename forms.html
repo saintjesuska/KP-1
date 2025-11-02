@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Формы - Информационная среда</title>
+</head>
+<body>
+    <nav>
+        <a href="index.html">Главная</a> |
+        <a href="content.html">Контент</a> |
+        <a href="forms.html">Формы</a> |
+        <a href="dom-read.html">DOM (чтение)</a> |
+        <a href="dom-change.html">DOM (изменение)</a> |
+        <a href="algorithm.html">Алгоритм</a> |
+        <a href="https://github.com/vmarshirov/g06u28" target="_blank">GitHub</a>
+    </nav>
+
+    <h1>Формы</h1>
+    
+    <div>
+        <a href="#contact-form">Контакты</a> |
+        <a href="#order-form">Заказ</a> |
+        <a href="forms.html">К началу</a>
+    </div>
+
+    <section id="contact-form">
+        <h2>Контактные данные</h2>
+        <form action="https://httpbin.org/post" method="POST">
+            <p>
+                <label>Фамилия: <input type="text" name="surname"></label>
+            </p>
+            <p>
+                <label>Имя: <input type="text" name="name"></label>
+            </p>
+            <p>
+                <label>Группа: <input type="text" name="group"></label>
+            </p>
+            <p>
+                <label>Телефон: <input type="text" name="phone"></label>
+            </p>
+            <p>
+                <label>Email: <input type="text" name="email" placeholder="ivanov@example.com"></label>
+            </p>
+            <p>
+                <label>Дата отправки: <input type="text" name="send_date" placeholder="дд-мм-гггг"></label>
+            </p>
+            <button type="submit">Отправить</button>
+        </form>
+    </section>
+
+    <section id="order-form">
+        <h2>Форма заказа</h2>
+        <form action="https://httpbin.org/post" method="POST">
+            <p>
+                <label>Товар: <input type="text" name="product_name"></label>
+            </p>
+            <p>
+                <label>Количество: <input type="text" name="quantity" value="1"></label>
+            </p>
+            <p>
+                <label>Категория:</label><br>
+                <input type="radio" name="category" value="electronics" checked> Электроника<br>
+                <input type="radio" name="category" value="books"> Книги<br>
+                <input type="radio" name="category" value="clothing"> Одежда
+            </p>
+            <p>
+                <label>Опции:</label><br>
+                <input type="checkbox" name="gift_wrap" value="1"> Подарочная упаковка<br>
+                <input type="checkbox" name="express" value="1"> Экспресс-доставка<br>
+                <input type="checkbox" name="insurance" value="1"> Страхование
+            </p>
+            <p>
+                <label>Дата доставки: <input type="text" name="delivery_date" placeholder="дд-мм-гггг"></label>
+            </p>
+            <p>
+                <label>Пароль: <input type="password" name="password"></label>
+            </p>
+            <input type="hidden" name="form_type" value="order_form">
+            <input type="hidden" name="default_status" value="pending">
+            <button type="submit">Оформить заказ</button>
+        </form>
+    </section>
+</body>
+</html>

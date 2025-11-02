@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM (изменение) - Информационная среда</title>
+</head>
+<body>
+    <nav>
+        <a href="index.html">Главная</a> |
+        <a href="content.html">Контент</a> |
+        <a href="forms.html">Формы</a> |
+        <a href="dom-read.html">DOM (чтение)</a> |
+        <a href="dom-change.html">DOM (изменение)</a> |
+        <a href="algorithm.html">Алгоритм</a> |
+        <a href="https://github.com/vmarshirov/g06u28" target="_blank">GitHub</a>
+    </nav>
+
+    <h1>Изменяем кириллицу на латиницу по клику</h1>
+    
+    <div id="passport-data">
+        <p>Фамилия: <span id="surname">Захаровская</span></p>
+        <p>Имя: <span id="name">Паулина</span></p>
+        <p>Год рождения: <span id="birthyear">2006</span></p>
+    </div>
+
+    <button onclick="changeToLatin()">Кириллица → Латиница</button>
+    <button onclick="changeToCyrillic()">Латиница → Кириллица</button>
+
+    <script>
+        const cyrillicData = {
+            surname: "Захаровская",
+            name: "Паулина", 
+            birthyear: "2006"
+        };
+
+        const latinData = {
+            surname: "Zakharovskaya",
+            name: "Paulina",
+            birthyear: "2006"
+        };
+
+        function changeToLatin() {
+            document.getElementById('surname').textContent = latinData.surname;
+            document.getElementById('name').textContent = latinData.name;
+            document.getElementById('birthyear').textContent = latinData.birthyear;
+        }
+
+        function changeToCyrillic() {
+            document.getElementById('surname').textContent = cyrillicData.surname;
+            document.getElementById('name').textContent = cyrillicData.name;
+            document.getElementById('birthyear').textContent = cyrillicData.birthyear;
+        }
+    </script>
+</body>
+</html>
